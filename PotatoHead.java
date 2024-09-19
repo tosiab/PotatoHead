@@ -4,6 +4,7 @@ public class PotatoHead{
     private String nose_color;
     private boolean teeth;
     private String eyes_color;
+    private int miles;
 
     public PotatoHead(){
         mustache = true;
@@ -11,6 +12,7 @@ public class PotatoHead{
         nose_color = "pink";
         teeth = true;
         eyes_color = "black";
+        miles = 3;
     }
 
     public PotatoHead(boolean m, String c, String n, boolean t, String e){
@@ -39,6 +41,10 @@ public class PotatoHead{
         return eyes_color;
     }
 
+    public int getmiles(){
+        return miles;
+    }
+
     public void setmustache(boolean k){
         mustache = k;
     }
@@ -59,6 +65,23 @@ public class PotatoHead{
         eyes_color = b;
     }
 
+    public void setmiles(int mi){
+        miles = mi;
+    }
+
+    public void talk(){
+        System.out.println("Superb");
+    }
+
+    public void interview(){
+        System.out.println("Hi I am a potato head");
+    }
+
+    public void run(int mi){
+        miles ++;
+        System.out.println(miles);
+    }
+
     public String toString(){
         return "The color of my ears is "+ color_ears + ". The color of my eyes is "+ eyes_color +".";
     }
@@ -68,5 +91,8 @@ public class PotatoHead{
         String eye = bob.geteyes_color();
         jim.setcolor_ears("black");
         System.out.println(bob.toString());
+        jim.talk();
+        jim.run(8);
+        jim.interview();
     }
 }
